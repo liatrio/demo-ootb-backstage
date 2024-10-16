@@ -1,13 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: demo-ootb-backstage
+  annotations:
+    github.com/project-slug: liatrio/demo-ootb-backstage
 spec:
   type: website
-  owner: john@example.com
+  owner: tag-autogov
   lifecycle: experimental

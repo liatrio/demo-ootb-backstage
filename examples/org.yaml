@@ -15,3 +15,11 @@ metadata:
 spec:
   type: team
   children: []
+---
+# Update to your GitHub username
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: <your-github-username>
+spec:
+  memberOf: [guests]
