@@ -2,7 +2,7 @@
 
 ## Setup GitHub
 
-[Code Insights](https://www.npmjs.com/package/@roadiehq/backstage-plugin-github-insights) for GitHub require GitHub auth prodiver whether the entity viewed is a public repo or not.
+[Code Insights](https://www.npmjs.com/package/@roadiehq/backstage-plugin-github-insights) for GitHub require GitHub auth provider whether the entity viewed is a public repo or not.
 
 ### GitHub Auth
 
@@ -87,10 +87,10 @@ yarn add dotenv
 yarn add dotenv-cli
 ```
 
-
 ### Add AutoGov Plugin
 
 ```zsh
+# from root
 cd packages/app
 yarn add liatrio/backstage-plugin-github-releases-autogov
 ```
@@ -109,8 +109,9 @@ import { GithubReleasesAutogovPage } from 'backstage-plugin-github-releases-auto
 ```
 
 ```zsh
+# from root
 cd packages/backend
-yarn add liatrio/backstage-plugin-github-releases-assets-backend
+yarn add @liatrio/backstage-plugin-github-releases-assets-backend
 ```
 
 - update `packages/backend/src/index.ts` with:

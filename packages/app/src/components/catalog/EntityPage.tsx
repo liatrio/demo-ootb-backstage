@@ -60,7 +60,7 @@ import {
 } from '@backstage/plugin-kubernetes';
 
 // packages/app/src/components/catalog/EntityPage.tsx
-import { GithubReleasesAutogovPage } from 'backstage-plugin-github-releases-autogov';
+import { GithubReleasesAutogovPage } from '@liatrio/backstage-plugin-github-releases-autogov';
 
 const techdocsContent = (
   <EntityTechdocsContent>

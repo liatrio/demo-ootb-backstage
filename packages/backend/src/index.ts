@@ -55,7 +55,7 @@ backend.add(import('@backstage/plugin-kubernetes-backend/alpha'));
 
 // autogov code insights
 backend.add(
-  import('backstage-plugin-github-releases-assets-backend'),
+  import('@liatrio/backstage-plugin-github-releases-assets-backend'),
 );
 
 backend.start();
