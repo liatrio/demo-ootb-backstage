@@ -92,7 +92,7 @@ yarn add dotenv-cli
 ```zsh
 # from root
 cd packages/app
-yarn add liatrio/backstage-plugin-github-releases-autogov
+yarn add @liatrio/backstage-plugin-github-releases-autogov@1.0.1
 ```
 
 - update `packages/app/src/components/catalog/EntityPage.tsx` with:
@@ -111,7 +111,7 @@ import { GithubReleasesAutogovPage } from '@liatrio/backstage-plugin-github-rele
 ```zsh
 # from root
 cd packages/backend
-yarn add @liatrio/backstage-plugin-github-releases-assets-backend
+yarn add @liatrio/backstage-plugin-github-releases-assets-backend@1.0.1
 ```
 
 - update `packages/backend/src/index.ts` with:

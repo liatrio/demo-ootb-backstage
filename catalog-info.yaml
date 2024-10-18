@@ -8,3 +8,4 @@ spec:
   type: website
   owner: tag-autogov
   lifecycle: experimental
+  system: demo-autogov-backstage-plugin
