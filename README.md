@@ -98,7 +98,7 @@ yarn add liatrio/backstage-plugin-github-releases-autogov
 - update `packages/app/src/components/catalog/EntityPage.tsx` with:
 
 ```packages/app/src/components/catalog/EntityPage.tsx
-import { GithubReleasesAutogovPage } from 'backstage-plugin-github-releases-autogov';
+import { GithubReleasesAutogovPage } from '@liatrio/backstage-plugin-github-releases-autogov';
 ...
 
 <EntityLayout.Route
@@ -118,6 +118,6 @@ yarn add @liatrio/backstage-plugin-github-releases-assets-backend
 
 ```packages/backend/src/index.ts
 backend.add(
-  import('backstage-plugin-github-releases-assets-backend'),
+  import('@liatrio/backstage-plugin-github-releases-assets-backend'),
 );
 ```
