@@ -14,6 +14,6 @@ export const HomePage = () => (
                 </p>
             </div>
         </div>
-        <img src="/banner.png" alt="Banner" style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }} />
+        <img src="/banner-clipped.png" alt="Banner" style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }} />
     </div>
 );
