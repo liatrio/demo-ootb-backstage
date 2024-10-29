@@ -20,6 +20,6 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: <github-username>
+  name: amber-beasley-liatrio
 spec:
   memberOf: [guests]
