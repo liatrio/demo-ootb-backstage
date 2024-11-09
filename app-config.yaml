@@ -96,7 +96,7 @@ catalog:
     - type: url
       target: https://github.com/liatrio/demo-ootb-backstage/blob/main/catalog-info.yaml
     - type: url
-      target: https://github.com/liatrio/backstage-github-autogov-plugin/blob/main/catalog-info.yaml
+      target: https://github.com/liatrio/backstage-plugin-autogov/blob/main/catalog-info.yaml
     - type: file
       target: ../../examples/local.yaml
       rules:

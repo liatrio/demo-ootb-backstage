@@ -7455,9 +7455,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@liatrio/backstage-plugin-autogov-releases-backend@npm:1.6.1":
-  version: 1.6.1
-  resolution: "@liatrio/backstage-plugin-autogov-releases-backend@npm:1.6.1"
+"@liatrio/backstage-plugin-autogov-releases-backend@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@liatrio/backstage-plugin-autogov-releases-backend@npm:1.6.2"
   dependencies:
     "@backstage/backend-defaults": "npm:^0.5.0"
     "@backstage/backend-plugin-api": "npm:^1.0.0"
@@ -7467,13 +7467,13 @@ __metadata:
     express: "npm:^4.17.1"
     express-promise-router: "npm:^4.1.0"
     node-fetch: "npm:2.6.7"
-  checksum: 10c0/8b19eb4224f0177b6c839720f9e707931ca9c49b2066c0a5cf2de253b74f3599270b441e01180e21545cb61543ec8f63e1df03062ab899d8bb123a69a4787e12
+  checksum: 10c0/0358d05dd160f61e9739a1e541c0f67a3fda26422ac37a3a43d2bea54cdf4dd306e48c7faef08a268ad973e882b9ee854be05ac4afc0392460495f0e9316780c
   languageName: node
   linkType: hard
 
-"@liatrio/backstage-plugin-autogov-releases-card@npm:1.6.1":
-  version: 1.6.1
-  resolution: "@liatrio/backstage-plugin-autogov-releases-card@npm:1.6.1"
+"@liatrio/backstage-plugin-autogov-releases-card@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@liatrio/backstage-plugin-autogov-releases-card@npm:1.6.2"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.0"
     "@backstage/core-components": "npm:^0.15.0"
@@ -7488,13 +7488,13 @@ __metadata:
     styled-components: "npm:^6.1.13"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/8c4af5c50714dd3353096f0f0b153ccea9ddaf84a2433f2653654bf0b05b0deef883e0b0096c0620fd2ff106310137725926322b287bb63cd41e399c42ea637d
+  checksum: 10c0/d46c6d1cbdc7f45a8112649b44d92bda4ded0d13cc73e6135588e2099f8dba22ff889839183e6551d0b514cef63cc41e3c0c3d781caa4ea24caa26d70a0b1987
   languageName: node
   linkType: hard
 
-"@liatrio/backstage-plugin-autogov-status-catalog-column@npm:1.6.1":
-  version: 1.6.1
-  resolution: "@liatrio/backstage-plugin-autogov-status-catalog-column@npm:1.6.1"
+"@liatrio/backstage-plugin-autogov-status-catalog-column@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@liatrio/backstage-plugin-autogov-status-catalog-column@npm:1.6.2"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.0"
     "@backstage/core-components": "npm:^0.15.0"
@@ -7509,11 +7509,26 @@ __metadata:
     react-use: "npm:^17.2.4"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/3c2f5128966444ebfe9524d21177481f5a8e4872b5ea4e781d20ec3bbe81c2f917b5faf3739d3f562e0191b36e0bc8e15f43be0533c6c5e2800d5d08e7a323e7
+  checksum: 10c0/de31fbdd89f23bbc5579560bba09f698baedc08de27fcdbbee757982ad72f7dacb35cf00af5462a59ff30397c94c2c49946a6e466686340fffb56d6769c41dc4
   languageName: node
   linkType: hard
 
-"@liatrio/backstage-plugin-backend-module-autogov-processor@npm:1.6.1, @liatrio/backstage-plugin-backend-module-autogov-processor@npm:^1.3.2":
+"@liatrio/backstage-plugin-backend-module-autogov-processor@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@liatrio/backstage-plugin-backend-module-autogov-processor@npm:1.6.2"
+  dependencies:
+    "@backstage/backend-plugin-api": "npm:^1.0.0"
+    "@backstage/catalog-model": "npm:^1.7.0"
+    "@backstage/config": "npm:^1.2.0"
+    "@backstage/integration": "npm:^1.15.1"
+    "@backstage/plugin-catalog-node": "npm:^1.13.1"
+    "@backstage/types": "npm:^1.1.1"
+    node-fetch: "npm:2"
+  checksum: 10c0/270bef6ac0f18919ecd4ed59d636f3558167c1c82e5c602a9468367a73620f10ab5326cad1957b7b163bf057490f3bc65d949bb38cd59a1d0a1d83a3a67d5207
+  languageName: node
+  linkType: hard
+
+"@liatrio/backstage-plugin-backend-module-autogov-processor@npm:^1.3.2":
   version: 1.6.1
   resolution: "@liatrio/backstage-plugin-backend-module-autogov-processor@npm:1.6.1"
   dependencies:
@@ -13663,8 +13678,8 @@ __metadata:
     "@backstage/plugin-user-settings": "npm:^0.8.12"
     "@backstage/test-utils": "npm:^1.6.0"
     "@backstage/theme": "npm:^0.5.7"
-    "@liatrio/backstage-plugin-autogov-releases-card": "npm:1.6.1"
-    "@liatrio/backstage-plugin-autogov-status-catalog-column": "npm:1.6.1"
+    "@liatrio/backstage-plugin-autogov-releases-card": "npm:1.6.2"
+    "@liatrio/backstage-plugin-autogov-status-catalog-column": "npm:1.6.2"
     "@material-ui/core": "npm:^4.12.2"
     "@material-ui/icons": "npm:^4.9.1"
     "@playwright/test": "npm:^1.32.3"
@@ -14325,8 +14340,8 @@ __metadata:
     "@backstage/plugin-search-backend-module-techdocs": "npm:^0.2.2"
     "@backstage/plugin-search-backend-node": "npm:^1.3.2"
     "@backstage/plugin-techdocs-backend": "npm:^1.10.13"
-    "@liatrio/backstage-plugin-autogov-releases-backend": "npm:1.6.1"
-    "@liatrio/backstage-plugin-backend-module-autogov-processor": "npm:1.6.1"
+    "@liatrio/backstage-plugin-autogov-releases-backend": "npm:1.6.2"
+    "@liatrio/backstage-plugin-backend-module-autogov-processor": "npm:1.6.2"
     "@types/express": "npm:^4.17.6"
     "@types/express-serve-static-core": "npm:^4.17.5"
     "@types/luxon": "npm:^2.0.4"
