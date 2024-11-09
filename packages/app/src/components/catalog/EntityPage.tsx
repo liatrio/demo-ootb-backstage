@@ -59,8 +59,9 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
+import { AutogovReleasesCard } from '@internal/backstage-plugin-autogov-releases-card';
+
 // packages/app/src/components/catalog/EntityPage.tsx
-import { GithubReleasesAutogovPage } from '@liatrio/backstage-plugin-github-releases-autogov';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -145,6 +146,15 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+    <EntitySwitch>
+      <EntitySwitch.Case
+        if={isKind('component') && isComponentType(['website', 'service'])}
+      >
+        <Grid item md={8} xs={12}>
+          <AutogovReleasesCard />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
   </Grid>
 );
 
@@ -191,12 +201,6 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>
-
-    <EntityLayout.Route
-      path="/code-insights"
-      title="Code Insights">
-      <GithubReleasesAutogovPage />
-    </EntityLayout.Route>
   </EntityLayout>
 );
 
@@ -231,12 +235,6 @@ const websiteEntityPage = (
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
-    </EntityLayout.Route>
-
-    <EntityLayout.Route
-      path="/code-insights"
-      title="Code Insights">
-      <GithubReleasesAutogovPage />
     </EntityLayout.Route>
   </EntityLayout>
 );
@@ -305,12 +303,6 @@ const apiPage = (
           <EntityApiDefinitionCard />
         </Grid>
       </Grid>
-    </EntityLayout.Route>
-
-    <EntityLayout.Route
-      path="/code-insights"
-      title="Code Insights">
-      <GithubReleasesAutogovPage />
     </EntityLayout.Route>
   </EntityLayout>
 );
