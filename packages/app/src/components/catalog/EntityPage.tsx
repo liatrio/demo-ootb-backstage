@@ -59,7 +59,7 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
-import { AutogovReleasesCard } from '@internal/backstage-plugin-autogov-releases-card';
+import { AutogovReleasesCard } from '@liatrio/backstage-plugin-autogov-releases-card';
 
 // packages/app/src/components/catalog/EntityPage.tsx
 

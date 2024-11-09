@@ -41,9 +41,8 @@ import { HomePage } from './components/home/HomePage';
 import {
   defaultColumnsWithAutogovStatusRightOf,
   AutogovLatestReleaseStatusPicker,
-} from '@internal/backstage-plugin-autogov-status-catalog-column';
+} from '@liatrio/backstage-plugin-autogov-status-catalog-column';
 import { DefaultFilters } from '@backstage/plugin-catalog-react';
-// import { AutogovReleasesCardPage } from '@internal/backstage-plugin-autogov-releases-card';
 
 const app = createApp({
   apis,
