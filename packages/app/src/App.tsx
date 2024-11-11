@@ -73,6 +73,7 @@ const routes = (
     <Route path="/" element={<HomepageCompositionRoot />}>
       <HomePage />
     </Route>
+    {/* <Route path="/catalog" element={<CatalogIndexPage />} /> */}
     <Route
       path="/catalog"
       element={
