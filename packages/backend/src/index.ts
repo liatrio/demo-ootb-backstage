@@ -53,9 +53,10 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend/alpha'));
 
-// autogov code insights
 backend.add(
-  import('@liatrio/backstage-plugin-github-releases-assets-backend'),
+  import('@liatrio/backstage-plugin-backend-module-autogov-processor'),
 );
+
+backend.add(import('@liatrio/backstage-plugin-autogov-releases-backend'));
 
 backend.start();

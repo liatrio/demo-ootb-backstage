@@ -42,8 +42,12 @@ integrations:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
     #   token: ${GHE_TOKEN}
+    - host: ghe.example.net
+      apiBaseUrl: https://ghe.example.net/api/v3
+      token: ${GHE_TOKEN}
 
 proxy:
+  {}
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
@@ -65,15 +69,17 @@ techdocs:
 auth:
   environment: development
   providers:
-    github:
-      development:
-        clientId: ${AUTH_GITHUB_CLIENT_ID}
-        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
-        signIn:
-          resolvers:
-            - resolver: usernameMatchingUserEntityName
+    guest: {}
+    # github:
+    #   development:
+    #     clientId: ${AUTH_GITHUB_CLIENT_ID}
+    #     clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+    #     signIn:
+    #       resolvers:
+    #         - resolver: usernameMatchingUserEntityName
 
 scaffolder:
+  {}
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
 
 catalog:
@@ -83,6 +89,17 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
+    - type: url
+      target: https://github.com/liatrio/demo-autogov-hello-world-app/blob/main/catalog-info.yaml
+    - type: url
+      target: https://github.com/liatrio/demo-ootb-backstage/blob/main/catalog-info.yaml
+    - type: url
+      target: https://github.com/liatrio/backstage-plugin-autogov/blob/main/catalog-info.yaml
+    - type: file
+      target: ../../examples/local.yaml
+      rules:
+        - allow: [System, User, Group]
+
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
       target: ../../examples/entities.yaml
@@ -116,3 +133,18 @@ kubernetes:
 permission:
   # setting this to `false` will disable permissions
   enabled: true
+
+autogov:
+  github:
+    cacheTTL:
+      minutes: 1
+    requireAnnotation: true
+    resultsFile:
+      allowOverride: false
+      default: results
+    entityKinds:
+      - Component
+    entityTypes:
+      - website
+      - service
+    maxReleases: 5

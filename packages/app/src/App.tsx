@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { apiDocsPlugin, ApiExplorerPage } from '@backstage/plugin-api-docs';
 import {
   CatalogEntityPage,
@@ -25,7 +25,6 @@ import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
 import { searchPage } from './components/search/SearchPage';
 import { Root } from './components/Root';
-import { githubAuthApiRef } from '@backstage/core-plugin-api';
 
 import {
   AlertDisplay,
@@ -39,6 +38,11 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { HomePage } from './components/home/HomePage';
+import {
+  defaultColumnsWithAutogovStatusRightOf,
+  AutogovLatestReleaseStatusPicker,
+} from '@liatrio/backstage-plugin-autogov-status-catalog-column';
+import { DefaultFilters } from '@backstage/plugin-catalog-react';
 
 const app = createApp({
   apis,
@@ -60,18 +64,7 @@ const app = createApp({
     });
   },
   components: {
-    SignInPage: props => (
-      <SignInPage
-        {...props}
-        auto
-        provider={{
-          id: 'github-auth-provider',
-          title: 'GitHub',
-          message: 'Sign in using GitHub',
-          apiRef: githubAuthApiRef,
-        }}
-      />
-    ),
+    SignInPage: props => <SignInPage {...props} providers={['guest']} />,
   },
 });
 
@@ -79,8 +72,24 @@ const routes = (
   <FlatRoutes>
     <Route path="/" element={<HomepageCompositionRoot />}>
       <HomePage />
-    </Route> 
-    <Route path="/catalog" element={<CatalogIndexPage />} />
+    </Route>
+    {/* <Route path="/catalog" element={<CatalogIndexPage />} /> */}
+    <Route
+      path="/catalog"
+      element={
+        <CatalogIndexPage
+          columns={context =>
+            defaultColumnsWithAutogovStatusRightOf('Description', context)
+          }
+          filters={
+            <>
+              <DefaultFilters />
+              <AutogovLatestReleaseStatusPicker />
+            </>
+          }
+        />
+      }
+    />
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}
