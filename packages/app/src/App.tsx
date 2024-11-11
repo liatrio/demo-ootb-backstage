@@ -38,11 +38,11 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { HomePage } from './components/home/HomePage';
-import {
-  defaultColumnsWithAutogovStatusRightOf,
-  AutogovLatestReleaseStatusPicker,
-} from '@liatrio/backstage-plugin-autogov-status-catalog-column';
-import { DefaultFilters } from '@backstage/plugin-catalog-react';
+// import {
+//   defaultColumnsWithAutogovStatusRightOf,
+//   AutogovLatestReleaseStatusPicker,
+// } from '@liatrio/backstage-plugin-autogov-status-catalog-column';
+// import { DefaultFilters } from '@backstage/plugin-catalog-react';
 
 const app = createApp({
   apis,
@@ -73,8 +73,8 @@ const routes = (
     <Route path="/" element={<HomepageCompositionRoot />}>
       <HomePage />
     </Route>
-    {/* <Route path="/catalog" element={<CatalogIndexPage />} /> */}
-    <Route
+    <Route path="/catalog" element={<CatalogIndexPage />} />
+    {/* <Route
       path="/catalog"
       element={
         <CatalogIndexPage
@@ -89,7 +89,7 @@ const routes = (
           }
         />
       }
-    />
+    /> */}
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}

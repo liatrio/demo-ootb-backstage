@@ -59,7 +59,7 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
-import { AutogovReleasesCard } from '@liatrio/backstage-plugin-autogov-releases-card';
+// import { AutogovReleasesCard } from '@liatrio/backstage-plugin-autogov-releases-card';
 
 // packages/app/src/components/catalog/EntityPage.tsx
 
@@ -146,7 +146,7 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
-    <EntitySwitch>
+    {/* <EntitySwitch>
       <EntitySwitch.Case
         if={isKind('component') && isComponentType(['website', 'service'])}
       >
@@ -154,7 +154,7 @@ const overviewContent = (
           <AutogovReleasesCard />
         </Grid>
       </EntitySwitch.Case>
-    </EntitySwitch>
+    </EntitySwitch> */}
   </Grid>
 );
 
