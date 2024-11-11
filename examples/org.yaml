@@ -16,10 +16,17 @@ spec:
   type: team
   children: []
 ---
-# Update to your GitHub username
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: Group
 metadata:
-  name: amber-beasley-liatrio
+  name: tag-autogov
 spec:
-  memberOf: [guests]
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: demo-autogov-backstage-plugin
+spec:
+  owner: tag-autogov

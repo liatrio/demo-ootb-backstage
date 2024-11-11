@@ -90,8 +90,6 @@ catalog:
     - allow: [Component, System, API, Resource, Location]
   locations:
     - type: url
-      target: https://github.com/liatrio/demo-gh-autogov-caller-workflow/blob/main/catalog-info.yaml
-    - type: url
       target: https://github.com/liatrio/demo-autogov-hello-world-app/blob/main/catalog-info.yaml
     - type: url
       target: https://github.com/liatrio/demo-ootb-backstage/blob/main/catalog-info.yaml
@@ -140,7 +138,7 @@ autogov:
   github:
     cacheTTL:
       minutes: 1
-    requireAnnotation: false
+    requireAnnotation: true
     resultsFile:
       allowOverride: false
       default: results
