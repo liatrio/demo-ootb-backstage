@@ -2,7 +2,7 @@
 
 ## Local Testing
 
-1. Install dependancies
+1. Install dependencies
 
    ```zsh
    yarn install

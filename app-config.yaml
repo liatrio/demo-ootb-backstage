@@ -147,4 +147,4 @@ autogov:
     entityTypes:
       - website
       - service
-    maxReleases: 5
+    maxReleases: {}
