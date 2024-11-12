@@ -33,7 +33,7 @@ The fine-grained token must have the following permission set:
 
 ## Run the App
 
-1. To start the app, run:
+- To start the app, run:
 
 ```sh
 yarn install
@@ -46,24 +46,26 @@ The following outlines what changes were made to a new Backstage instance to ena
 
 ### enable dotenv
 
-```package.json
-"scripts": {
-    "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
-    "start": "dotenv -e .env yarn workspace app start",
-    "start-backend": "dotenv -e .env yarn workspace backend start",
-```
+1. Modify the following scripts in the `package.json` file:
+
+    ```json
+    "scripts": {
+        "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
+        "start": "dotenv -e .env yarn workspace app start",
+        "start-backend": "dotenv -e .env yarn workspace backend start",
+    ```
 
 1. add dependencies:
 
-```zsh
-yarn add concurrently
-yarn add dotenv
-yarn add dotenv-cli
-```
+    ```bash
+    yarn add concurrently
+    yarn add dotenv
+    yarn add dotenv-cli
+    ```
 
 ### Add Autogov Plugins
 
-1. To install to the Autogov Plugins to the appropriate place, run the following two commands:
+- To install to the Autogov Plugins to the appropriate place, run the following two commands:
 
    ```zsh
    # from root
@@ -73,7 +75,7 @@ yarn add dotenv-cli
 
 #### Autogov Plug-in Release Card Backend
 
-1. Update `packages/backend/src/index.ts` with:
+- Update `packages/backend/src/index.ts` with:
 
 ```diff
 +  backend.add(
@@ -124,7 +126,7 @@ backend.start();
 
 #### Autogov Plug-in Latest Release Autogov Status Catalog Processor
 
-1. Update `packages/backend/src/index.ts` with:
+- Update `packages/backend/src/index.ts` with:
 
 ```diff
 +  backend.add(
@@ -137,37 +139,37 @@ backend.start();
 
 1. Update `packages/app/App.tsx`:
 
-```diff
-+  import {
-+    defaultColumnsWithAutogovStatusRightOf,
-+    AutogovLatestReleaseStatusPicker,
-+  } from '@liatrio/backstage-plugin-autogov-status-catalog-column';
-+  import { DefaultFilters } from '@backstage/plugin-catalog-react';
+   ```diff
+   +  import {
+   +    defaultColumnsWithAutogovStatusRightOf,
+   +    AutogovLatestReleaseStatusPicker,
+   +  } from '@liatrio/backstage-plugin-autogov-status-catalog-column';
+   +  import { DefaultFilters } from '@backstage/plugin-catalog-react';
 
-const app = createApp({
-```
+   const app = createApp({
+   ```
 
 1. Further down, find the following code block and update:
 
-```diff
--      <Route path="/catalog" element={<CatalogIndexPage />} />
-+      <Route
-+        path="/catalog"
-+        element={
-+          <CatalogIndexPage
-+            columns={context =>
-+              defaultColumnsWithAutogovStatusRightOf('Description', context)
-+            }
-+            filters={
-+              <>
-+                <DefaultFilters />
-+                <AutogovLatestReleaseStatusPicker />
-+              </>
-+            }
-+          />
-+        }
-+      />
-```
+   ```diff
+   -      <Route path="/catalog" element={<CatalogIndexPage />} />
+   +      <Route
+   +        path="/catalog"
+   +        element={
+   +          <CatalogIndexPage
+   +            columns={context =>
+   +              defaultColumnsWithAutogovStatusRightOf('Description', context)
+   +            }
+   +            filters={
+   +              <>
+   +                <DefaultFilters />
+   +                <AutogovLatestReleaseStatusPicker />
+   +              </>
+   +            }
+   +          />
+   +        }
+   +      />
+   ```
 
 ## Contributing
 
